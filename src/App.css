@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+@font-face {
+  font-family: 'digital-clock-font';
+  src: url(./fonts/DS-DIGIT.TTF);
+}
+.clock{
+  font-family: 'digital-clock-font' ,sans-serif;
+}
