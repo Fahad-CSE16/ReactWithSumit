@@ -12,10 +12,10 @@ export default class Button extends Component {
     }
     render() {
         console.log("Button")
-        const { change, locale } = this.props;
+        const { change, locale, bangla, valobasa } = this.props;
         return (
             <div>
-                <button type="button" onClick={()=>{change(locale)}}>Click Here2</button>
+                <button type="button" onClick={()=>{change(locale)}}>{bangla ? "ঘড়ি পরিবর্তন করুন" : "change clock"} </button>{valobasa && <p>ভালবাসা নিন</p>}
             </div>
         )
     }

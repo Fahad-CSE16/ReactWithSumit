@@ -35,11 +35,20 @@ export default class Timeshow extends Component {
     }
     render() {
         const { date,locale } = this.state;
-        console.log("Clock")
+        let button;
+        if (locale === "en-US"){
+            button = (
+                <Button change={this.handleClick} bangla={false} valobasa={false} locale="bn-BD" />
+            )
+        }else {
+            button = (
+                <Button change={this.handleClick} bangla valobasa locale="en-US" />
+            )
+        }
         return (
             <div>
                 <h1 className="clock">{date.toLocaleTimeString(locale)}</h1>
-                <Button change={this.handleClick} locale="en-US">Click Here</Button>
+                {button}
             </div>
         )
     }
