@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Button  from './Button';
+
 export default class Timeshow extends Component {
     // constructor(props){
     //     super(props);
@@ -36,6 +37,7 @@ export default class Timeshow extends Component {
     render() {
         const { date,locale } = this.state;
         let button;
+        
         if (locale === "en-US"){
             button = (
                 <Button change={this.handleClick} bangla={false} valobasa={false} locale="bn-BD" />
@@ -45,6 +47,7 @@ export default class Timeshow extends Component {
                 <Button change={this.handleClick} bangla valobasa locale="en-US" />
             )
         }
+        
         return (
             <div>
                 <h1 className="clock">{date.toLocaleTimeString(locale)}</h1>
